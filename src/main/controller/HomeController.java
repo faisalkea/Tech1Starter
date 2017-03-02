@@ -26,13 +26,12 @@ public class HomeController extends HttpServlet {
         logger.log(Level.INFO, "Password: " + password);
         logger.log(Level.INFO, "Checkbox: " + request.getParameter("rememberMe"));
 
-        String creds = null;
 
-        if (creds != null) {
+        if (username.equals(username)) {
             //TODO: Common for both user and admin and username to the request
 
 
-            if (creds.equals("admin")) {
+            if (password.equals(password)) {
 
 
 
