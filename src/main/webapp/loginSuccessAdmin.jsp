@@ -2,15 +2,16 @@
   Created by IntelliJ IDEA.
   User: NyBruger
   Date: 22-10-2016
-  Time: 15:09
+  Time: 15:50
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <head>
-    <title>Success</title>
+    <title>loginAdmin</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -19,8 +20,8 @@
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
 <div class="container">
-    <!-- Static navbar -->
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -53,25 +54,15 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
+                    <li class="active"><a href="">Default <span class="sr-only">(current)</span></a></li>
                     <li><a href="../navbar-static-top/">Static top</a></li>
-                    <li><a href="/">Log out</a></li>
+                    <li><a href="/main/webapp">Log out</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
     </nav>
 
-    <!-- Main component for a primary marketing message or call to action -->
-    <div class="jumbotron">
-        <h1>You logged in successfully ${username}!</h1>
-        <p>This Semester you are going to learn how to build your own web app :-)</p>
-        <p>And we will see how to build and deploy it in AWS Elastic BeanStalk!</p>
-
-        <p>
-            <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-        </p>
-    </div>
-
+    <h1>You logged in successfully as a ADMIN ${username}!</h1>
     <table class="table table-striped table-bordered table-hover">
         <thead>
         <tr>
@@ -89,6 +80,10 @@
         </c:forEach>
         </tbody>
     </table>
-</div>
 
-<%@ include file="/footer.jsp" %>
+    <form class="form-signin" method="POST" action="ContentController">
+        <textarea class="form-control" rows="4" cols="50" name="newContent" placeholder="Enter new Message here..."></textarea>
+        <br/>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit message</button>
+    </form>
+
