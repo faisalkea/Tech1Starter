@@ -1,4 +1,4 @@
-package main.controller;
+package controller;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,6 +15,7 @@ import java.util.logging.Logger;
 public class HomeController extends HttpServlet {
 
     private static Logger logger = Logger.getLogger(HomeController.class.getName());
+
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -49,5 +50,10 @@ public class HomeController extends HttpServlet {
             rd.forward(request, response);
         }
 
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        doPost(req, resp);
     }
 }

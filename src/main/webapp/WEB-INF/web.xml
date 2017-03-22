@@ -6,11 +6,11 @@
 
     <servlet>
         <servlet-name>loginServlet</servlet-name>
-        <servlet-class>main.controller.HomeController</servlet-class>
+        <servlet-class>controller.HomeController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>content</servlet-name>
-        <servlet-class>main.controller.ContentController</servlet-class>
+        <servlet-class>controller.ContentController</servlet-class>
     </servlet>
 
     <servlet-mapping>
