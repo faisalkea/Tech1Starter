@@ -20,7 +20,7 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
 <div class="container">
-    <H1 class="text-center">My First Web App (Change)</H1>
+    <H1 class="text-center">My First Web App</H1>
 
     <div class="wrapper">
         <form class="form-signin" method="POST" action="Fredlet">
